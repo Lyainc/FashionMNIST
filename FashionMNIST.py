@@ -1,5 +1,6 @@
+import keras
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense, Flatten
 from keras.datasets import fashion_mnist
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,4 +42,4 @@ print('Test accuracy:', test_acc)
 
 predictions = model.predict(test_images)
 print(predictions[0])
-print(np.argmax(predcitions[0]))
+print(np.argmax(predictions[0]))
